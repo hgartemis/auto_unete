@@ -12,7 +12,7 @@
 
 # Gradle
 log/
-gradle/
+#gradle/
 target/
 hooks/pre-push
 
