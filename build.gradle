@@ -1,0 +1,59 @@
+defaultTasks 'clean', 'aggregate'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    ext {
+        serenityVersion = "2.4.34" //Jun, 2021
+        assertjCoreVersion = "3.19.0" //Jan, 2021
+        poiVersion = "5.0.0" //Jan, 2021
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.34")
+    }
+}
+
+apply plugin: 'java'
+//apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-cucumber6:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-rest-assured:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+
+    testImplementation "org.assertj:assertj-core:$rootProject.ext.assertjCoreVersion"
+    //Microsoft Format Files 97-2003
+    implementation "org.apache.poi:poi:$rootProject.ext.poiVersion"
+    //Microsoft Format Files 2007+
+    implementation "org.apache.poi:poi-ooxml:$rootProject.ext.poiVersion"
+    implementation "com.microsoft.sqlserver:mssql-jdbc:6.1.0.jre8"
+    implementation "org.slf4j:slf4j-api:1.7.2"
+    implementation "org.slf4j:slf4j-log4j12:1.7.2"
+    testImplementation "org.hamcrest:hamcrest-all:1.3"
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test {
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
+
+tasks.named('wrapper') {
+    distributionType = Wrapper.DistributionType.ALL
+}
+
+test.finalizedBy(aggregate)
