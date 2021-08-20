@@ -13,13 +13,8 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-
-import java.awt.print.Book;
 import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
