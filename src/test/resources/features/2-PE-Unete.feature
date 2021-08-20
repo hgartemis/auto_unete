@@ -1,4 +1,4 @@
-@colombia
+@peru
 Feature: Verificar la funcionalidad de...
 
   @postulante-credito
@@ -12,4 +12,3 @@ Feature: Verificar la funcionalidad de...
       | pais   | mensaje          |
       | peru   | registro exitoso |
       | mexico | registro exitoso |
-      #| 12345678     | registro no exitoso |
