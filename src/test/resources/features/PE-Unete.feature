@@ -6,7 +6,7 @@ Feature: Verificar la funcionalidad de...
     Given quiero registrar un consultor
     When el postulante tiene credito en <pais>
     #And utiliza campo adicional
-    Then verifica respuesta "<mensaje>"
+    Then verifica respuesta "<mensaje>" para PE
 
     Examples:
       | pais   | mensaje          |

@@ -1,6 +1,7 @@
 package com.belcorp.auto.stepdefinitions;
 
 import com.belcorp.auto.models.MXPostulantModel;
+import com.belcorp.auto.tasks.CORegistrarTask;
 import com.belcorp.auto.tasks.MXRegistrarTask;
 import com.belcorp.auto.utils.Constant;
 import com.belcorp.auto.utils.JsonUtil;
@@ -23,15 +24,17 @@ public class MXRegistroStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("quiero registrar el postulante {string}")
-    public void quieroRegistrarElPostulante(String id) {
+    @Given("quiero registrar el postulante MX {string}")
+    public void quieroRegistrarElPostulanteMX(String id) {
+        mxPostulantModel = JsonUtil.getMXPostulant(Constant.MX_postulant_with_credit, id);
+        theActorCalled(actor).wasAbleTo(MXRegistrarTask.llenandoFormulario(mxPostulantModel));
     }
 
-    @When("el postulante tiene credito")
-    public void elPostulanteTieneCredito() {
+    @When("el postulante MX tiene credito")
+    public void elPostulanteMXTieneCredito() {
     }
 
-    @Then("verifica respuesta {string}")
-    public void verificaRespuesta(String respuesta) {
+    @Then("verifica respuesta {string} para MX")
+    public void verificaRespuestaParaMX(String respuesta) {
     }
 }

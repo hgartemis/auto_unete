@@ -32,7 +32,7 @@ public class PERegistroStepDefinition {
     public void elPostulanteTieneCredito(String consultor) {
     }
 
-    @Then("verifica respuesta {string}")
-    public void verificaRespuesta(String respuesta) {
+    @Then("verifica respuesta {string} para PE")
+    public void verificaRespuestaParaPE(String respuesta) {
     }
 }
