@@ -28,4 +28,7 @@ public class Constant {
     public static final String GT_postulant_with_credit = rutaJson + "";
     public static final String SV_postulant_with_credit = rutaJson + "";
     public static final String BO_postulant_with_credit = rutaJson + "";
+
+    public static final String switchYes = "1";
+    public static final String switchNo = "0";
 }

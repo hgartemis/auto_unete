@@ -7,7 +7,9 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 public class JsonUtil {
 
@@ -16,8 +18,8 @@ public class JsonUtil {
         JSONObject jsonObject = new JSONObject();
 
         try {
-            FileReader fileReader = new FileReader(json);
-            Object object = parser.parse(fileReader);
+            InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(json), StandardCharsets.UTF_8);
+            Object object = parser.parse(inputStreamReader);
             JSONArray jsonArray = (JSONArray) object;
             jsonObject = (JSONObject) jsonArray.get(Integer.parseInt(id) - 1);
         } catch (Exception e) {

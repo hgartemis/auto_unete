@@ -1,13 +1,8 @@
 @colombia
 Feature: Verificar la funcionalidad de...
 
-  @postulante-credito
-  Scenario Outline: Registrar un postulante con credito
-    Given quiero registrar el postulante CO "<id>"
-    When el postulante CO tiene credito
-    Then verifica respuesta "<mensaje>" para CO
-
-    Examples:
-      | id | mensaje          |
-      | 1  | registro exitoso |
-      #| 2  | hola             |
+  @postulant-credit
+  Scenario: Register a Postulant with credit
+    Given a Postulant of peru register in web
+    When the peru Postulant have credit
+    Then register for peru is successfully
