@@ -56,9 +56,13 @@ public class CORegistrarPage {
             .the("check: Acepto los Términos y Condiciones")
             .locatedBy("//fd-checkbox[@class='sc-fd-checkbox-field sc-fd-checkbox-field-s hydrated' and contains(.,'Acepto los')]");
 
+    public static final String chkTC_shadow = "arguments[0].shadowRoot.getElementById('fd-checkbox-0').click()";
+
     public static final Target chkPP = Target
             .the("check: Acepto la Política de Privacidad")
             .locatedBy("//fd-checkbox[@class='sc-fd-checkbox-field sc-fd-checkbox-field-s hydrated' and contains(.,'Acepto la')]");
+
+    public static final String chkPP_shadow = "arguments[0].shadowRoot.getElementById('fd-checkbox-1').click()";
 
     public static final Target btnContinue = Target
             .the("botón: Continuar")
