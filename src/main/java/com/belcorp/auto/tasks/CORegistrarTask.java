@@ -21,10 +21,6 @@ public class CORegistrarTask implements Task {
         this.coPostulantModel = coPostulantModel;
     }
 
-    public static CORegistrarTask llenandoFormulario(COPostulantModel coPostulantModel) {
-        return instrumented(CORegistrarTask.class, coPostulantModel);
-    }
-
     @Override
     @Step("{0} ingresa los datos del postulante")
     public <T extends Actor> void performAs(T actor) {
@@ -56,5 +52,9 @@ public class CORegistrarTask implements Task {
                 ClickCheck.on(chkTC, chkTC_shadow),
                 ClickCheck.on(chkPP, chkPP_shadow),
                 Click.on(btnContinue));
+    }
+
+    public static CORegistrarTask llenandoFormulario(COPostulantModel coPostulantModel) {
+        return instrumented(CORegistrarTask.class, coPostulantModel);
     }
 }
