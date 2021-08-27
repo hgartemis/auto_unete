@@ -44,7 +44,7 @@ public class CORegistrarTask implements Task {
 
         actor.attemptsTo(Enter.theValue(coPostulantModel.getLinkMTOName()).into(txtLinkMTOName));
 
-        if (coPostulantModel.getSwitchYesNo().equals(Constant.switchYes)) {
+        if (coPostulantModel.getSwitchRecommend().equals(Constant.switchYes)) {
             actor.attemptsTo(Click.on(swiYesNo));
         }
 

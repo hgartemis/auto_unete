@@ -11,7 +11,7 @@ public class COPostulantModel {
     private String Email;
     private String TaxRegime;
     private String LinkMTOName;
-    private String SwitchYesNo;
+    private String SwitchRecommend;
 
     public String getTypeDocument() {
         return TypeDocument;
@@ -85,11 +85,11 @@ public class COPostulantModel {
         LinkMTOName = linkMTOName;
     }
 
-    public String getSwitchYesNo() {
-        return SwitchYesNo;
+    public String getSwitchRecommend() {
+        return SwitchRecommend;
     }
 
-    public void setSwitchYesNo(String switchYesNo) {
-        SwitchYesNo = switchYesNo;
+    public void setSwitchRecommend(String switchRecommend) {
+        SwitchRecommend = switchRecommend;
     }
 }

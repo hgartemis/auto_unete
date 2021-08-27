@@ -42,7 +42,7 @@ public class JsonUtil {
         coPostulantModel.setEmail((String) jsonObject.get("Email"));
         coPostulantModel.setTaxRegime((String) jsonObject.get("TaxRegime"));
         coPostulantModel.setLinkMTOName((String) jsonObject.get("LinkMTOName"));
-        coPostulantModel.setSwitchYesNo((String) jsonObject.get("SwitchYesNo"));
+        coPostulantModel.setSwitchRecommend((String) jsonObject.get("SwitchYesNo"));
 
         return coPostulantModel;
     }
