@@ -59,6 +59,16 @@ public class JsonUtil {
         JSONObject jsonObject = jsonToObject(json, id);
 
         MXPostulantModel mxPostulantModel = new MXPostulantModel();
+        mxPostulantModel.setNames((String) jsonObject.get("Names"));
+        mxPostulantModel.setFirstLastName((String) jsonObject.get("FirstLastName"));
+        mxPostulantModel.setSecondLastName((String) jsonObject.get("SecondLastName"));
+        mxPostulantModel.setBirthDate((String) jsonObject.get("BirthDate"));
+        mxPostulantModel.setGender((String) jsonObject.get("Gender"));
+        mxPostulantModel.setCelNumber((String) jsonObject.get("CelNumber"));
+        mxPostulantModel.setEmail((String) jsonObject.get("Email"));
+        mxPostulantModel.setMunicipality((String) jsonObject.get("Municipality"));
+        mxPostulantModel.setLinkMTOName((String) jsonObject.get("LinkMTOName"));
+        mxPostulantModel.setRFC((String) jsonObject.get("RFC"));
 
         return mxPostulantModel;
     }

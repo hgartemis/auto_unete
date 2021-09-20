@@ -31,4 +31,9 @@ public class Constant {
 
     public static final String switchYes = "1";
     public static final String switchNo = "0";
+
+    //--------DatabaseConnections
+    public static final String userDatabaseNuevoQA = "usr_sb2";
+    public static final String passwordDatabaseNuevoQA = "Belcorp2016";
+    public static final String connectionURLPeru = "jdbc:sqlserver://;servername=AWNTS74;databaseName=BelcorpPeru";
 }

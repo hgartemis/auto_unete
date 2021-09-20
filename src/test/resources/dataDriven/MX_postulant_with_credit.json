@@ -1,26 +1,14 @@
 [
   {
-    "TypeDocument": "C.C. Cédula de Ciudadanía",
-    "NumDocument": "1045426104",
-    "FirstLastName": "PADILLA",
-    "BirthDate": "31081990",
-    "Gender": "M",
-    "CelNumber": "965824138",
-    "Email": "cesareo.tello@inetum.com",
-    "TaxRegime": "No Contribuyente",
+    "Names": "Juan Alberto",
+    "FirstLastName": "Alvarez",
+    "SecondLastName": "Perez",
+    "BirthDate": "01/01/1980",
+    "Gender": "Hombre",
+    "CelNumber": "9541234555",
+    "Email": "mail@m.com",
+    "Municipality": "Abasolo, Guanajuato",
     "LinkMTOName": "cesareots",
-    "SwitchYesNo": "0"
-  },
-  {
-    "TypeDocument": "C.C. Cédula de Ciudadanía",
-    "NumDocument": "1045426104",
-    "FirstLastName": "PADILLA",
-    "BirthDate": "31081990",
-    "Gender": "M",
-    "CelNumber": "965824138",
-    "Email": "cesareo.tello@inetum.com",
-    "TaxRegime": "No Contribuyente",
-    "LinkMTOName": "cesareots",
-    "SwitchYesNo": "0"
+    "RFC": "0"
   }
 ]

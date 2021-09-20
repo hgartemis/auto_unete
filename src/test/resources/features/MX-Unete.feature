@@ -1,13 +1,9 @@
 @mexico
-Feature: Verificar la funcionalidad de...
+Feature: Verify register a postulant with credit for Mexico
 
   @postulante-credito
-  Scenario Outline: Registrar un postulante con credito
-    Given quiero registrar el postulante MX "<id>"
-    When el postulante MX tiene credito
-    Then verifica respuesta "<mensaje>" para MX
-
-    Examples:
-      | id | mensaje          |
-      | 1  | registro exitoso |
-      #| 2  | hola             |
+  Scenario: Register a Postulant with credit
+    Given a Postulant of Mexico register in web
+    And Connect to Database
+   # When The Mexican Postulant complete personal info
+   # When The Mexican Postulant complete personal info

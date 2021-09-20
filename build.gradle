@@ -36,6 +36,7 @@ dependencies {
     implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
 
+    implementation "io.github.sukgu:automation:0.0.10"
     testImplementation "org.assertj:assertj-core:$rootProject.ext.assertjCoreVersion"
     //Microsoft Format Files 97-2003
     implementation "org.apache.poi:poi:$rootProject.ext.poiVersion"
