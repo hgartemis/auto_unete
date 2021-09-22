@@ -51,6 +51,39 @@ public class JsonUtil {
         JSONObject jsonObject = jsonToObject(json, id);
 
         PEPostulantModel pePostulantModel = new PEPostulantModel();
+        double numAle = 2343;
+
+        System.out.println("numero : " + numAle);
+
+        String nameMarket = jsonObject.get("LinkMTOName").toString() + String.valueOf(numAle);
+        System.out.println("nombre de Market: " + nameMarket);
+
+        pePostulantModel.setTypeDocument((String) jsonObject.get("TypeDocument"));
+        pePostulantModel.setNumDocument((String) jsonObject.get("NumDocument"));
+        pePostulantModel.setCelNumber((String) jsonObject.get("CelNumber"));
+        pePostulantModel.setEmail((String) jsonObject.get("Email"));
+        pePostulantModel.setDepartment((String) jsonObject.get("Department"));
+        pePostulantModel.setProvince((String) jsonObject.get("Province"));
+        pePostulantModel.setDistrict((String) jsonObject.get("District"));
+        //pePostulantModel.setLinkMTOName(nameMarket); // jsonObject.get("LinkMTOName")
+        pePostulantModel.setLinkMTOName(jsonObject.get("LinkMTOName").toString()); //
+        pePostulantModel.setSwitchYesNo((String) jsonObject.get("SwitchYesNo"));
+        pePostulantModel.setConsultantCode((String) jsonObject.get("ConsultantCode"));
+        pePostulantModel.setTermsConditionCheck((String) jsonObject.get("TermsConditionCheck"));
+        pePostulantModel.setPrivacyPolicyCheck((String) jsonObject.get("PrivacyPolicyCheck"));
+        pePostulantModel.setPublicityCheck((String) jsonObject.get("PublicityCheck"));
+
+        pePostulantModel.setCompleteNames((String) jsonObject.get("CompleteNames"));
+        pePostulantModel.setFirstLastName((String) jsonObject.get("FirstLastName"));
+        pePostulantModel.setSecondLastName((String) jsonObject.get("SecondLastName"));
+        pePostulantModel.setBirthDate((String) jsonObject.get("BirthDate"));
+        pePostulantModel.setGender((String) jsonObject.get("Gender"));
+        pePostulantModel.setDistrictReception((String) jsonObject.get("DistrictReception"));
+        pePostulantModel.setTypeAddress((String) jsonObject.get("TypeAddress"));
+        pePostulantModel.setUrbanization((String) jsonObject.get("Urbanization"));
+        pePostulantModel.setApple((String) jsonObject.get("Apple"));
+        pePostulantModel.setLot((String) jsonObject.get("Lot"));
+        pePostulantModel.setReference((String) jsonObject.get("Reference"));
 
         return pePostulantModel;
     }

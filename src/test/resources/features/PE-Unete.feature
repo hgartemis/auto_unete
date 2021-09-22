@@ -1,14 +1,8 @@
 @peru
-Feature: Verificar la funcionalidad de...
+Feature: Register successfully a postulant in Country Perú
 
-  @postulante-credito
-  Scenario Outline: Registrar un postulante con credito
-    Given quiero registrar un consultor
-    When el postulante tiene credito en <pais>
-    #And utiliza campo adicional
-    Then verifica respuesta "<mensaje>" para PE
-
-    Examples:
-      | pais   | mensaje          |
-      | peru   | registro exitoso |
-      | mexico | registro exitoso |
+  @postulante-peru
+  Scenario: Register a Postulant with credit
+    Given a Postulant of peru register in web
+    When the peru Postulant have credit
+    Then register for peru is successfully
