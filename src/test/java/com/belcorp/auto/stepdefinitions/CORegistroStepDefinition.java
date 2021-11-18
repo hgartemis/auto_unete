@@ -23,17 +23,17 @@ public class CORegistroStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("a Postulant of peru register in web")
+    @Given("a Postulant of Colombia register in web")
     public void aPostulantOfPeruRegisterInWeb() {
         coPostulantModel = JsonUtil.getCOPostulant(Constant.CO_postulant_with_credit, "1");
         theActorCalled(actor).wasAbleTo(CORegistrarTask.llenandoFormulario(coPostulantModel));
     }
 
-    @When("the peru Postulant have credit")
+    @When("the colombian Postulant have credit")
     public void thePeruPostulantHaveCredit() {
     }
 
-    @Then("register for peru is successfully")
+    @Then("register for Colombia is successfully")
     public void registerForPeruIsSuccessfully() {
     }
 }
